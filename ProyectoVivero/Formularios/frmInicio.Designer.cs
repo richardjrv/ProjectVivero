@@ -25,6 +25,7 @@ namespace ProjectVivero
             pnlMenu = new Panel();
             lblSistema = new Label();
             btnInicio = new Button();
+            btnViveros = new Button();
             btnSensores = new Button();
             btnMediciones = new Button();
             btnActuadores = new Button();
@@ -56,6 +57,7 @@ namespace ProjectVivero
             pnlMenu.Controls.Add(btnActuadores);
             pnlMenu.Controls.Add(btnMediciones);
             pnlMenu.Controls.Add(btnSensores);
+            pnlMenu.Controls.Add(btnViveros);
             pnlMenu.Controls.Add(btnInicio);
             pnlMenu.Controls.Add(lblSistema);
             pnlMenu.Dock = DockStyle.Left;
@@ -105,6 +107,26 @@ namespace ProjectVivero
             btnInicio.Click += btnInicio_Click;
 
             // =====================================================
+            // BOTÓN VIVEROS
+            // =====================================================
+            btnViveros.BackColor = Color.FromArgb(27, 94, 52);
+            btnViveros.Cursor = Cursors.Hand;
+            btnViveros.FlatAppearance.BorderSize = 0;
+            btnViveros.FlatStyle = FlatStyle.Flat;
+            btnViveros.Font = new Font(
+                "Segoe UI",
+                10F,
+                FontStyle.Bold
+            );
+            btnViveros.ForeColor = Color.White;
+            btnViveros.Location = new Point(0, 158);
+            btnViveros.Name = "btnViveros";
+            btnViveros.Size = new Size(220, 48);
+            btnViveros.TabIndex = 2;
+            btnViveros.Text = "Viveros";
+            btnViveros.UseVisualStyleBackColor = false;
+            btnViveros.Click += btnViveros_Click;
+            // =====================================================
             // BOTÓN SENSORES
             // =====================================================
             btnSensores.BackColor = Color.FromArgb(27, 94, 52);
@@ -117,10 +139,10 @@ namespace ProjectVivero
                 FontStyle.Bold
             );
             btnSensores.ForeColor = Color.White;
-            btnSensores.Location = new Point(0, 158);
+            btnSensores.Location = new Point(0, 206);
             btnSensores.Name = "btnSensores";
             btnSensores.Size = new Size(220, 48);
-            btnSensores.TabIndex = 2;
+            btnSensores.TabIndex = 3;
             btnSensores.Text = "Sensores";
             btnSensores.UseVisualStyleBackColor = false;
             btnSensores.Click += btnSensores_Click;
@@ -138,10 +160,10 @@ namespace ProjectVivero
                 FontStyle.Bold
             );
             btnMediciones.ForeColor = Color.White;
-            btnMediciones.Location = new Point(0, 206);
+            btnMediciones.Location = new Point(0, 254);
             btnMediciones.Name = "btnMediciones";
             btnMediciones.Size = new Size(220, 48);
-            btnMediciones.TabIndex = 3;
+            btnMediciones.TabIndex = 4;
             btnMediciones.Text = "Mediciones";
             btnMediciones.UseVisualStyleBackColor = false;
             btnMediciones.Click += btnMediciones_Click;
@@ -159,10 +181,10 @@ namespace ProjectVivero
                 FontStyle.Bold
             );
             btnActuadores.ForeColor = Color.White;
-            btnActuadores.Location = new Point(0, 254);
+            btnActuadores.Location = new Point(0, 302);
             btnActuadores.Name = "btnActuadores";
             btnActuadores.Size = new Size(220, 48);
-            btnActuadores.TabIndex = 4;
+            btnActuadores.TabIndex = 5;
             btnActuadores.Text = "Actuadores";
             btnActuadores.UseVisualStyleBackColor = false;
             btnActuadores.Click += btnActuadores_Click;
@@ -180,10 +202,10 @@ namespace ProjectVivero
                 FontStyle.Bold
             );
             btnUsuarios.ForeColor = Color.White;
-            btnUsuarios.Location = new Point(0, 302);
+            btnUsuarios.Location = new Point(0, 350);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.Size = new Size(220, 48);
-            btnUsuarios.TabIndex = 5;
+            btnUsuarios.TabIndex = 6;
             btnUsuarios.Text = "Usuarios";
             btnUsuarios.UseVisualStyleBackColor = false;
             btnUsuarios.Click += btnUsuarios_Click;
@@ -205,7 +227,7 @@ namespace ProjectVivero
             btnSalir.Location = new Point(0, 600);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(220, 50);
-            btnSalir.TabIndex = 6;
+            btnSalir.TabIndex = 7;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
@@ -285,7 +307,7 @@ namespace ProjectVivero
             pnlContenido.Dock = DockStyle.Fill;
             pnlContenido.Location = new Point(220, 85);
             pnlContenido.Name = "pnlContenido";
-            pnlContenido.Padding = new Padding(35);
+            pnlContenido.Padding = new Padding(0);
             pnlContenido.Size = new Size(880, 565);
             pnlContenido.TabIndex = 2;
 
@@ -350,8 +372,10 @@ namespace ProjectVivero
             Controls.Add(pnlSuperior);
             Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 9F);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
+            FormBorderStyle = FormBorderStyle.Sizable;
+            MaximizeBox = true;
+            MinimumSize = new Size(1100, 650);
+            WindowState = FormWindowState.Maximized;
             Name = "frmInicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema Inteligente de Monitoreo Agrícola";
@@ -367,6 +391,7 @@ namespace ProjectVivero
         private Panel pnlMenu;
         private Label lblSistema;
         private Button btnInicio;
+        private Button btnViveros;
         private Button btnSensores;
         private Button btnMediciones;
         private Button btnActuadores;
