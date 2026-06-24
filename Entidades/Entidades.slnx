@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../Api/Api.Server/Api.Server.csproj" />
+  <Project Path="../BusinessLogic/BusinessLogic.csproj" />
+  <Project Path="../DataAccess/DataAccess.csproj" />
+  <Project Path="../ProyectoVivero/ProjectVivero.csproj" />
+  <Project Path="Entidades.csproj" />
+</Solution>
